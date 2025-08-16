@@ -70,13 +70,14 @@ export SCRIPT_FOLDER=/home/sriram/bin/script
 export PATH=$SCRIPT_FOLDER:$PATH
 
 # --------- ON START -----------
-neofetch
 
 # --------- BINDING -----------
 alias h="mvn spring-boot:run"
 alias m="javac *.java && java Main"
+alias ta="tmux -u a"
 
 # --------- JAVA -----------
-export JAVA_HOME=/opt/jdk-21.0.7
+#export JAVA_HOME=/opt/jdk-21.0.8
+export JAVA_HOME=/opt/jdk-24.0.2
 export PATH=$JAVA_HOME/bin:$PATH
 
