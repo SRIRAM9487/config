@@ -23,6 +23,7 @@ return {
         "quick_lint_js",
         "yamlls",
         "emmet_ls",
+        "tailwindcss",
         "ts_ls"
       },
     })
