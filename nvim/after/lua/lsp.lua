@@ -1,0 +1,28 @@
+vim.api.nvim_create_autocmd("LspAttach", {
+	callback = function(event)
+		local client = vim.lsp.get_client_by_id(event.data.client_id)
+		if client == nil then
+			return
+		end
+	end,
+})
+
+vim.lsp.config("lua_ls", {
+	settings = {
+		Lua = {
+			diagnostics = {
+				disable = {
+					"undefined-global",
+					"undefined-field",
+				},
+			},
+		},
+	},
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "java",
+	callback = function(args)
+		require("jdtls.jdtls_setup").setup()
+	end,
+})

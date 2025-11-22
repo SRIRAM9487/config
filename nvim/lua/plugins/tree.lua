@@ -1,4 +1,3 @@
-
 return {
 	"nvim-neo-tree/neo-tree.nvim",
 	branch = "v3.x",
@@ -10,10 +9,8 @@ return {
 	config = function()
 		require("neo-tree").setup({
 			filesystem = {
-				hijack_netrw = true, 
+				hijack_netrw = true,
 			},
 		})
-
 	end,
 }
-
